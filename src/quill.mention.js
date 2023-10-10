@@ -691,7 +691,7 @@ class Mention {
 
   getTextBeforeCursor() {
     const startPos = Math.max(0, this.cursorPos - this.options.maxChars);
-    const textBeforeCursorPos = this.quill.getText(
+    const textBeforeCursorPos = this.quill.editor.getText(
       startPos,
       this.cursorPos - startPos
     );
@@ -707,7 +707,7 @@ class Mention {
 
     const textOffset = Math.max(0, this.cursorPos - this.options.maxChars);
     const textPrefix = textOffset
-      ? this.quill.getText(textOffset - 1, textOffset)
+      ? this.quill.editor.getText(textOffset - 1, textOffset)
       : "";
 
     const { mentionChar, mentionCharIndex } = getMentionCharIndex(
