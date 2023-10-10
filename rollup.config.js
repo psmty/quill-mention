@@ -14,8 +14,8 @@ export default [
         name: "quillMention",
         plugins: [terser()],
         globals: {
-          quill: "Quill"
-        }
+          quill: "Quill",
+        },
       },
       {
         file: "dist/quill.mention.min.js",
@@ -23,43 +23,45 @@ export default [
         name: "quillMention",
         plugins: [terser()],
         globals: {
-          quill: "Quill"
-        }
-      }
+          quill: "Quill",
+        },
+      },
     ],
     external: ["quill"],
     plugins: [
       localResolve(),
       babel({
-        exclude: ["node_modules/**"]
+        exclude: ["node_modules/**"],
       }),
       postcss({
         extract: true,
-        minimize: true
-      })
-    ]
+        minimize: true,
+      }),
+    ],
   },
   {
     input: "src/quill.mention.js",
     output: [
       {
+        generatedCode: "es5",
         file: pkg.main,
-        format: "cjs"
+        name: "quill.mention",
+        format: "umd",
       },
       {
         file: pkg.module,
-        format: "es"
-      }
+        format: "es",
+      },
     ],
     external: ["quill"],
     plugins: [
       localResolve(),
       babel({
-        exclude: ["node_modules/**"]
+        exclude: ["node_modules/**"],
       }),
       postcss({
-        extract: "quill.mention.css"
-      })
-    ]
-  }
+        extract: "quill.mention.css",
+      }),
+    ],
+  },
 ];

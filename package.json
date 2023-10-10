@@ -1,6 +1,6 @@
 {
-  "name": "quill-mention",
-  "version": "4.0.1",
+  "name": "@psmty/quill-mention",
+  "version": "4.0.2",
   "description": "@mentions for the Quill rich text editor",
   "homepage": "https://quill-mention.com/",
   "main": "dist/quill.mention.csj.js",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@ava/babel": "^2.0.0",
     "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-transform-object-assign": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/register": "^7.10.1",

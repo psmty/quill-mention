@@ -2,7 +2,7 @@ import Quill from "quill";
 
 const Embed = Quill.import("blots/embed");
 
-class MentionBlot extends Embed {
+export class MentionBlot extends Embed {
   hoverHandler;
 
   constructor(scroll, node) {
@@ -96,4 +96,4 @@ MentionBlot.blotName = "mention";
 MentionBlot.tagName = "span";
 MentionBlot.className = "mention";
 
-Quill.register("blots/mention", MentionBlot);
+// Quill.register("blots/mention", MentionBlot);
